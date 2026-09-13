@@ -46,25 +46,25 @@ Dán 1 đoạn trích xuất log tiêu biểu từ file `docs/trace_waterfall.js
         "advisor": "PGS.TS Nguyễn Văn A"
       }
     },
-    "latency_ms": 4469.05
+    "latency_ms": 1549.83
   },
   {
     "step": 2,
     "query": "Hãy tra cứu thông tin học vụ của sinh viên SV2026001.",
     "action_type": "FINAL_ANSWER",
     "thought": "Gemini phản hồi trực tiếp bằng văn bản (không cần gọi công cụ).",
-    "output": "Dưới đây là thông tin học vụ của sinh viên **SV2026001**:\n\n* **Họ và tên:** Nguyễn Văn An\n* **Mã sinh viên:** SV2026001\n* **Lớp:** AI-K4\n* **Điểm trung bình tích lũy (GPA):** 3.85\n* **Trạng thái học tập:** Đang học\n* **Email:** an.nv@vinuni.edu.vn\n* **Cố vấn học thuật:** PGS.TS Nguyễn Văn A\n\nNếu bạn cần hỗ trợ thêm thông tin hoặc muốn đặt lịch hẹn tư vấn với Cố vấn học thuật, vui lòng cho tôi biết!",
-    "latency_ms": 8440.6
+    "output": "Thought: Dựa vào kết quả Observation đã thu thập được từ công cụ `academic_query`, tôi đã có đầy đủ thông tin học vụ của sinh viên có mã `SV2026001`. Do đó, tôi có thể trả lời trực tiếp yêu cầu của người dùng mà không cần gọi thêm công cụ nào khác.\n\nFinal Answer: \nDưới đây là thông tin học vụ của sinh viên **Nguyễn Văn An** (Mã sinh viên: **SV2026001**):\n\n- **Họ và tên:** Nguyễn Văn An\n- **Lớp:** AI-K4\n- **Điểm trung bình (GPA):** 3.85\n- **Email:** an.nv@vinuni.edu.vn\n- **Trạng thái học tập:** Đang học\n- **Cố vấn học tập:** PGS.TS Nguyễn Văn A",
+    "latency_ms": 1869.31
   },
   {
     "step": 1,
     "query": "Hãy đặt lịch hẹn với cố vấn học tập cho sinh viên SV2026001 vào lúc 10:00 ngày 15/09/2026 với PGS.TS Nguyễn Văn A.",
     "action_type": "TOOL_EXECUTION",
-    "tool_name": "schedule_appointment",
+    "tool_name": "appointment_booking",
     "arguments": {
-      "datetime_str": "10:00 15/09/2026",
       "student_id": "SV2026001",
-      "advisor_name": "PGS.TS Nguyễn Văn A"
+      "advisor_name": "PGS.TS Nguyễn Văn A",
+      "datetime_str": "10:00 15/09/2026"
     },
     "observation": {
       "status": "SUCCESS",
@@ -74,7 +74,7 @@ Dán 1 đoạn trích xuất log tiêu biểu từ file `docs/trace_waterfall.js
       "advisor": "PGS.TS Nguyễn Văn A",
       "message": "Đặt lịch thành công cho sinh viên SV2026001 với PGS.TS Nguyễn Văn A vào lúc 10:00 15/09/2026."
     },
-    "latency_ms": 3530.3
+    "latency_ms": 1576.02
   }
 ]
 ```
