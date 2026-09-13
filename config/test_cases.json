@@ -8,7 +8,7 @@
   },
   {
     "id": "TC02",
-    "type": "single_tool_query",
+    "type": "academic_query",
     "question": "Hãy tra cứu thông tin học vụ của sinh viên SV2026001.",
     "expected_behavior": "Agent nhận diện nhu cầu tra cứu, tự động phát sinh Tool Call 'academic_query' với mã SV2026001.",
     "complexity": "Medium"
