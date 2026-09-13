@@ -8,7 +8,7 @@
   },
   {
     "id": "TC02",
-    "type": "academic_query",
+    "type": "single_tool_query",
     "question": "Hãy tra cứu thông tin học vụ của sinh viên SV2026001.",
     "expected_behavior": "Agent nhận diện nhu cầu tra cứu, tự động phát sinh Tool Call 'academic_query' với mã SV2026001.",
     "complexity": "Medium"
@@ -16,22 +16,22 @@
   {
     "id": "TC03",
     "type": "appointment_booking",
-    "question": "Hãy đặt lịch hẹn với cố vấn học tập cho sinh viên SV2026001 vào ngày 15/09/2024 lúc 10:00 AM với cố vấn Nguyễn Văn A.",
+    "question": "Hãy đặt lịch hẹn với cố vấn học tập cho sinh viên SV2026001 vào lúc 10:00 ngày 15/09/2026 với PGS.TS Nguyễn Văn A.",
     "expected_behavior": "Agent tự động phát sinh Tool Call 'schedule_appointment' với đúng thời gian và thông tin sinh viên.",
     "complexity": "Medium"
   },
   {
     "id": "TC04",
     "type": "multi_step_reasoning",
-    "question": "Hãy tra cứu thông tin học vụ của sinh viên SV2026001 và sau đó đặt lịch hẹn với cố vấn học tập vào ngày 15/09/2024 lúc 10:00 AM.",
-    "expected_behavior": "Agent thực hiện chuỗi suy luận ReAct: Tra cứu cố vấn học tập của sinh viên trước, sau đó tiến hành đặt lịch hẹn.",
+    "question": "Hãy tra cứu thông tin học vụ của sinh viên SV2026001, sau đó đặt lịch hẹn tư vấn với chính cố vấn học tập của sinh viên này vào lúc 14:00 ngày 18/09/2026.",
+    "expected_behavior": "Agent thực hiện chuỗi suy luận ReAct đa bước: Tra cứu hồ sơ sinh viên trước qua academic_query để xác định cố vấn phụ trách, sau đó gọi schedule_appointment để đặt lịch.",
     "complexity": "High"
   },
   {
     "id": "TC05",
     "type": "edge_case_handling",
     "question": "Hãy tra cứu thông tin học vụ của sinh viên SV9999999 (một mã sinh viên không tồn tại).",
-    "expected_behavior": "Agent nhận kết quả NOT_FOUND từ Tool và đưa ra phản hồi lịch sự, chính xác không bịa đặt dữ liệu.",
+    "expected_behavior": "Agent nhận kết quả NOT_FOUND từ Tool và đưa ra phản hồi lịch sự, chính xác không bịa đặt dữ liệu (Anti-Hallucination).",
     "complexity": "Medium"
   }
 ]
